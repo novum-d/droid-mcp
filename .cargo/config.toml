@@ -1,0 +1,7 @@
+# The user's shell may provide a GNU `cc` through Nix. Apple targets must be
+# linked with the system clang so SDK libraries such as libiconv are resolved.
+[target.aarch64-apple-darwin]
+linker = "/usr/bin/clang"
+
+[target.x86_64-apple-darwin]
+linker = "/usr/bin/clang"
